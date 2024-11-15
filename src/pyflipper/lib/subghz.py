@@ -27,4 +27,9 @@ class Subghz(Threaded):
         # TODO: implement regex catch errors
         assert sub_file.endswith('.sub')
         return self._serial_wrapper.send(f"subghz decode_raw {sub_file}")
+
+    def tx_from_file(self, sub_file: str) -> str:
+        # TODO: implement regex catch errors
+        assert sub_file.endswith('.sub')
+        return self._serial_wrapper.send(f"subghz tx_from_file {sub_file}")
     
